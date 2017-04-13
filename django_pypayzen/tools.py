@@ -97,7 +97,7 @@ def process_response(data):
     # We check if the signature is valid. If not return
     if not is_signature_valid(data):
         logger.warning(
-            "Django-Payzen : Response signature detected as invalid",
+            "django-pypayzen : Response signature detected as invalid",
             extra={"stack": True}
         )
         return None
@@ -119,10 +119,10 @@ def process_response(data):
         form = forms.PaymentResponseForm(data)
     if form.is_valid():
         response = form.save()
-        logger.info("Django-Payzen : Transaction {} response received !"
+        logger.info("django-pypayzen : Transaction {} response received !"
                     .format(response.vads_trans_id))
     else:
-        logger.error("Django-Payzen : Response could not be saved - {} {}"
+        logger.error("django-pypayzen : Response could not be saved - {} {}"
                      .format(form.errors, data),
                      extra={"stack": True})
         response = None

@@ -1,4 +1,4 @@
-"""django-payzen signals."""
+"""django-pypayzen signals."""
 import django.dispatch
 
 response_error = django.dispatch.Signal()

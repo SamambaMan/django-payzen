@@ -1,4 +1,4 @@
-"""Django-Payzen views."""
+"""django-pypayzen views."""
 
 from django import http
 from django.views import generic

@@ -28,7 +28,7 @@ Settings
 -----------------
 
 Default currency used if the currency is not explicitely set in the payment request. vads_currency value should be the ISO 4217 code of the currency. By default vads_currency = 978, which corresponds to €.
-You can have look at the *django_payzen.constants.VADS_CURRENCY_CHOICES* variable to see the supported currencies.
+You can have look at the *django_pypayzen.constants.VADS_CURRENCY_CHOICES* variable to see the supported currencies.
 
 .. _settings_vads_action_mode
 

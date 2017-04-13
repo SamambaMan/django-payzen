@@ -1,9 +1,8 @@
 """base urls.py for testing purpose."""
 
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
 
-urlpatterns = patterns(
-    "",
-    url(r"payment/", include("django_payzen.urls")),
-)
+urlpatterns = [
+    url(r"payment/", include("django_pypayzen.urls")),
+]

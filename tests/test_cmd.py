@@ -2,7 +2,7 @@ from distutils.core import Command
 
 
 class TestCommand(Command):
-    description = "Launch all tests under django_payzen app"
+    description = "Launch all tests under django_pypayzen app"
     user_options = [
         ("site=", None, "Payzen site id (VADS_SITE_ID)"),
         ("certificate=", None, "Payzen certificate (VADS_CERTIFICATE)"),
@@ -34,7 +34,7 @@ class TestCommand(Command):
             INSTALLED_APPS=(
                 "django.contrib.auth",
                 "django.contrib.contenttypes",
-                "django_payzen",
+                "django_pypayzen",
             ),
             MIDDLEWARE_CLASSES = (
                 "django.contrib.sessions.middleware.SessionMiddleware",
@@ -58,7 +58,7 @@ class TestCommand(Command):
                     },
                 },
                 "loggers": {
-                    "django_payzen": {
+                    "django_pypayzen": {
                         "handlers": ["console"],
                         "propagate": True,
                         "level": "INFO"
@@ -77,4 +77,4 @@ class TestCommand(Command):
         from django.core.management import call_command
         self.configure_settings()
         django.setup()
-        call_command("test", "django_payzen", liveserver="0.0.0.0:8000")
+        call_command("test", "django_pypayzen", liveserver="0.0.0.0:8000")

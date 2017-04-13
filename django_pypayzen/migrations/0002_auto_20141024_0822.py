@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('django_payzen', '0001_initial'),
+        ('django_pypayzen', '0001_initial'),
     ]
 
     operations = [

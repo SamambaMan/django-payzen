@@ -82,7 +82,7 @@ class Migration(migrations.Migration):
                 ('vads_version', models.CharField(default=b'V2', max_length=2)),
                 ('signature', models.CharField(max_length=40)),
                 ('vads_capture_delay', models.PositiveIntegerField(null=True, blank=True)),
-                ('vads_contrib', models.CharField(default=b'django-payzen v0.9', max_length=255, null=True, blank=True)),
+                ('vads_contrib', models.CharField(default=b'django-pypayzen v0.9', max_length=255, null=True, blank=True)),
                 ('vads_payment_cards', models.CharField(max_length=127, null=True, blank=True)),
                 ('vads_return_mode', models.CharField(blank=True, max_length=12, null=True, choices=[(b'AMEX', b'American Express'), (b'AURORE-MULTI', b'AURORE (multi brand)'), (b'BUYSTER', b'BUYSTER'), (b'CB', b'CB'), (b'COFINOGA', b'COFINOGA'), (b'E-CARTEBLEUE', b'e blue card'), (b'MASTERCARD', b'Eurocard / MasterCard'), (b'JCB', b'JCB'), (b'MAESTRO', b'Maestro'), (b'ONEY', b'ONEY'), (b'ONEY_SANDBOX', b'ONEY SANDBOX mode'), (b'PAYPAL', b'PAYPAL'), (b'PAYPAL_SB', b'PAYPAL SANDBOX mode'), (b'PAYSAFECARD', b'PAYSAFECARD'), (b'VISA', b'Visa'), (b'VISA_ELECTRON', b'Visa Electron'), (b'COF3XCB', b'3x CB Cofinoga'), (b'COF3XCB_SB', b'3x CB Cofinoga SANDBOX')])),
                 ('vads_theme_config', models.CharField(max_length=255, null=True, blank=True)),
@@ -99,8 +99,8 @@ class Migration(migrations.Migration):
                 ('vads_redirect_success_message', models.CharField(max_length=255, null=True, blank=True)),
                 ('vads_redirect_error_timeout', models.PositiveIntegerField(null=True, blank=True)),
                 ('vads_redirect_error_message', models.CharField(max_length=255, null=True, blank=True)),
-                ('custom_payment_config', models.ManyToManyField(to='django_payzen.CustomPaymentConfig')),
-                ('payment_config', models.ForeignKey(blank=True, to='django_payzen.MultiPaymentConfig', null=True)),
+                ('custom_payment_config', models.ManyToManyField(to='django_pypayzen.CustomPaymentConfig')),
+                ('payment_config', models.ForeignKey(blank=True, to='django_pypayzen.MultiPaymentConfig', null=True)),
             ],
             options={
                 'verbose_name': 'Request',
@@ -234,7 +234,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='paymentrequest',
             name='theme',
-            field=models.ForeignKey(blank=True, to='django_payzen.ThemeConfig', null=True),
+            field=models.ForeignKey(blank=True, to='django_pypayzen.ThemeConfig', null=True),
             preserve_default=True,
         ),
         migrations.AddField(

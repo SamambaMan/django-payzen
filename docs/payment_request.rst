@@ -1,13 +1,13 @@
 PaymentRequest
 ==============
 
-Have a look at the `Payment Request model <https://github.com/bsvetchine/django-payzen/blob/master/django_payzen/models.py>`_ and at the `Payzen documentation <https://www.payzen.eu/wp-content/uploads/integration/Guide_d_implementation_formulaire_paiement_V2_Payzen_V2.9f.pdf>`_ to see all the parameters that are supported by payzen.
+Have a look at the `Payment Request model <https://github.com/bsvetchine/django-pypayzen/blob/master/django_pypayzen/models.py>`_ and at the `Payzen documentation <https://www.payzen.eu/wp-content/uploads/integration/Guide_d_implementation_formulaire_paiement_V2_Payzen_V2.9f.pdf>`_ to see all the parameters that are supported by payzen.
 
 Be careful about the amount parameter ; its value is always a positive integer repesenting the amount in cents.
 
 ::
 
-    from django_payzen import models as pz_models
+    from django_pypayzen import models as pz_models
 
     payment_request = pz_models.PaymentRequest(
         amount=1000  # corresponds to 10 € if no vads_currency supplied
@@ -36,7 +36,7 @@ Special PaymentRequest fields
 ---------------------
 
 *vads_trans_id* is a value composed by 6 numeric characters representing the id of the transaction. There is a unicity constraint between *vads_trans_date* and *vads_site_id*.
-*vads_trans_id* field is mandatory. If not set by user, django-payzen will generate randomly its value, considering the probability of having 2 generated values identical for the same day as null.
+*vads_trans_id* field is mandatory. If not set by user, django-pypayzen will generate randomly its value, considering the probability of having 2 generated values identical for the same day as null.
 
 
 The following fields should not be set manually. Their value are computed during the save() or update() methods. Their value are computed from all other parmeters. Thus, there are some precations to take :

@@ -1,4 +1,4 @@
-Welcome to Django-Payzen's documentation!
+Welcome to django-pypayzen's documentation!
 ===========================================
 
 .. include:: ../README.rst

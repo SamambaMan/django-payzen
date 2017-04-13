@@ -1,7 +1,7 @@
 Signals
 =======
 
-You may need to automate actions once a payment is received or rejected or if django_payzen cannot read/analyze payzen responses. The following signals allow you to do that.
+You may need to automate actions once a payment is received or rejected or if django_pypayzen cannot read/analyze payzen responses. The following signals allow you to do that.
 
 .. _signals_payment_success
 
@@ -22,4 +22,4 @@ signal sent once a payment unsuccessful response is received and saved. You can 
 ``payment_error``
 -------------------
 
-signal sent if django_payzen cannot read or analyze the request sent by payzen.
+signal sent if django_pypayzen cannot read or analyze the request sent by payzen.

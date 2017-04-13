@@ -85,17 +85,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/Django-Payzen.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/django-pypayzen.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/Django-Payzen.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/django-pypayzen.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/Django-Payzen"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/Django-Payzen"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/django-pypayzen"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/django-pypayzen"
 	@echo "# devhelp"
 
 epub:
