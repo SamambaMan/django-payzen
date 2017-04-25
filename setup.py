@@ -9,7 +9,7 @@ ROOT = os.path.dirname(__file__)
 
 setup(
     name="django-pypayzen",
-    version="0.1",
+    version="0.2",
     description="Django app to manage payments with Payzen ETP",
     license='MIT',
     author="Felipe Ferreira",

@@ -15,7 +15,8 @@ VADS_CURRENCY_CHOICES = (
     ('826', 'Pound sterling'),
     ('840', 'American dollar'),
     ('953', 'Franc Pacifique (CFP)'),
-    ('978', 'Euro')
+    ('978', 'Euro'),
+    ('986', 'Brazillian Real'),
 )
 
 VADS_CTX_MODE_CHOICES = (
