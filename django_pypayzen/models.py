@@ -327,7 +327,7 @@ class PaymentResponse(WarrantyDetails, CustomerDetails,
         max_length=255, blank=True, null=True)
     vads_user_info = models.CharField(max_length=255, blank=True, null=True)
     vads_ext_trans_id = models.CharField(
-        max_length=6, blank=True, null=True)
+        max_length=20, blank=True, null=True)
     vads_payment_option_code = models.TextField(blank=True, null=True)
 
     vads_change_rate = models.TextField(blank=True, null=True)
